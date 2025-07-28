@@ -20,11 +20,11 @@ public class SendDocumant {
         this.driver = driver;
     }
 
-    // Return names of free documents
+    // Return free documents
     public List<String> getFreeDocumentNames() {
         List<String> freeDocumentNames = new ArrayList<>();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.className("price-amount")));
 
         List<WebElement> priceElements = driver.findElements(By.className("price-amount"));
