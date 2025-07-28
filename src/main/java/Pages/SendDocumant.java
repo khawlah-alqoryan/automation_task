@@ -15,7 +15,7 @@ public class SendDocumant {
 
     WebDriver driver;
 
-    // Constructor
+
     public SendDocumant(WebDriver driver) {
         this.driver = driver;
     }
@@ -35,7 +35,6 @@ public class SendDocumant {
                     WebElement labelElement = priceElement.findElement(By.xpath("./../preceding-sibling::*[1]"));
                     freeDocumentNames.add(labelElement.getText().trim());
                 } catch (NoSuchElementException e) {
-                    // Optionally log this
                 }
             }
         }
