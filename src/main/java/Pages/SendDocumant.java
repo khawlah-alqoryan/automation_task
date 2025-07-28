@@ -15,12 +15,12 @@ public class SendDocumant {
 
     WebDriver driver;
 
-    // Constructor
+
     public SendDocumant(WebDriver driver) {
         this.driver = driver;
     }
 
-    // Return names of free documents
+    // Return free documents
     public List<String> getFreeDocumentNames() {
         List<String> freeDocumentNames = new ArrayList<>();
 
@@ -35,7 +35,6 @@ public class SendDocumant {
                     WebElement labelElement = priceElement.findElement(By.xpath("./../preceding-sibling::*[1]"));
                     freeDocumentNames.add(labelElement.getText().trim());
                 } catch (NoSuchElementException e) {
-                    // Optionally log this
                 }
             }
         }
